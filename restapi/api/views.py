@@ -62,7 +62,6 @@ class RegisterView(APIView):
             register.password = request.data['password']
             register.save()
             (response, status_code) = ('Employee successfully created', status.HTTP_200_OK)
-            print response
             return Response(response, status=status_code)
 
 
